@@ -6,8 +6,6 @@ class CloudinaryField(models.Field):
 
   description = "An image stored in Cloudinary"
 
-  __metaclass__ = models.SubfieldBase
-
   def __init__(self, *args, **kwargs):
     options = {'max_length': 100}
     self.default_form_class = kwargs.pop("default_form_class", forms.CloudinaryFileField)
