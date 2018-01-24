@@ -205,7 +205,7 @@ def text(text, **options):
     return call_api("text", params, **options)
 
 
-def call_api(action, params, http_headers=None, return_error=False, unsigned=False, file=None, timeout=None, **options):
+def call_api(action, params, http_headers=None, return_error=False, unsigned=False, file=None, timeout=180, **options):
     if http_headers is None:
         http_headers = {}
     file_io = None
